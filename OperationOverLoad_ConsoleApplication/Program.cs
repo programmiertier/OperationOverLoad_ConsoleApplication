@@ -13,7 +13,7 @@ namespace OperationOverLoad_ConsoleApplication
         {
             Rechteck blumenbeet = new Rechteck(10, 15) { bepflanzung = "Rosen" };       // string so hinzufügen, statt ein weiteres mal zu überladen
             /* blumenbeet.umfang = 0; // deswegen wird in Rechteck der setter ignoriert    // Abruf hierdurch vom Setter */
-            WriteLine("Der Zaun um das Blumenbeet ist {0} Meter lang und hat eine Fläche von {1}", blumenbeet.umfang, blumenbeet.flaeche);
+            WriteLine("Der Zaun um das Blumenbeet ist \t{0} Meter lang und hat eine Fläche von:\t{1}", blumenbeet.umfang, blumenbeet.flaeche);
             WriteLine(blumenbeet.bepflanzung);              // bepflanzung wird angezeigt
             
             ReadLine();
