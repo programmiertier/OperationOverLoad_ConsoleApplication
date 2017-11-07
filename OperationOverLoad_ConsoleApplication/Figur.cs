@@ -11,5 +11,11 @@ namespace OperationOverLoad_ConsoleApplication
     {
         protected double _umfang;
         protected double _flaeche;
+
+        public double umfang
+        { get { return _umfang; } }
+
+        public double flaeche
+        { get { return _flaeche; } }
     }
 }

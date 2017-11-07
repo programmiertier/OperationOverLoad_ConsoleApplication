@@ -16,13 +16,34 @@ namespace OperationOverLoad_ConsoleApplication
         public string bepflanzung
         { get { return "Das Beet ist bepflanzt mit " + _bepflanzung; } set { _bepflanzung = value; } }
 
+        public double breite
+        {
+            get
+            {
+                return _breite;
+            }
+
+            set
+            {
+                _breite = value;
+            }
+        }
+
+        public double laenge
+        {
+            get
+            {
+                return _laenge;
+            }
+
+            set
+            {
+                _laenge = value;
+            }
+        }
+
 
         // gibt den Umfang des Rechtecks zurück
-        public double umfang
-        { get { return _umfang; } /* set { _umfang = 2 * (_breite + _laenge);  hier steht nicht value! } */ }
-
-        public double flaeche
-        { get { return _flaeche; } }
 
         public Rechteck(double breite, double laenge)
         {
@@ -31,6 +52,13 @@ namespace OperationOverLoad_ConsoleApplication
             _umfang = 2 * (breite + laenge);
             _flaeche = breite * laenge;
         }
-
+                            // typ der entsteht welches Rechenzeichen   Beteiligten
+        public static Rechteck operator         +                       (Rechteck eck1, Rechteck eck2)
+        {
+            Rechteck tmp = new Rechteck(0, 0);
+            tmp._flaeche = eck1.flaeche + eck2.flaeche;
+            tmp._umfang = eck1.umfang + eck2.umfang;
+            return tmp;
+        }
     }
 }
